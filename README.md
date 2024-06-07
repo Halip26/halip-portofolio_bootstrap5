@@ -1,6 +1,6 @@
 # Portofolio Halip
 
-![Screenshot](projects/halip-portofolio.netlify.png)
+![Screenshot](projects/halip-portofolio.netlify.jpg)
 
 ## Deskripsi
 
