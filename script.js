@@ -28,5 +28,5 @@ form.addEventListener("submit", (e) => {
 
 // Get the current year
 const currentYear = new Date().getFullYear();
-// Set the current year to the span with id "currentYear"
+// Set the current year to the "currentYear" element
 document.getElementById("currentYear").textContent = currentYear;
