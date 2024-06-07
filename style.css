@@ -5,4 +5,5 @@ section {
 
 .text-justify p {
   text-align: justify;
+  text-indent: 3em;
 }
