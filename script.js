@@ -30,3 +30,31 @@ form.addEventListener("submit", (e) => {
 const currentYear = new Date().getFullYear();
 // Set the current year to the "currentYear" element
 document.getElementById("currentYear").textContent = currentYear;
+
+// smooth scroll for navigation links
+const navLinks = document.querySelectorAll(".nav-link");
+navLinks.forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const href = this.getAttribute("href");
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const targetId = href.substring(1);
+      const targetSection = document.getElementById(targetId);
+
+      if (targetSection) {
+        targetSection.scrollIntoView({ behavior: "smooth" });
+
+        // close mobile menu if open
+        const navbarCollapse = document.getElementById("navbarNav");
+        if (navbarCollapse.classList.contains("show")) {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+          bsCollapse.hide();
+        }
+
+        // update active state
+        navLinks.forEach((l) => l.classList.remove("active"));
+        this.classList.add("active");
+      }
+    }
+  });
+});
